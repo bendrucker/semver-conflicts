@@ -2,6 +2,7 @@
 
 var semver = require('semver')
 var sortComparators = require('sort-semver-comparators')
+var remove = require('arr-remove')
 
 module.exports = function removeSemverConflicts (range) {
   return semver.Range(range)
@@ -19,11 +20,12 @@ module.exports = function removeSemverConflicts (range) {
 
 function cleanSet (comparators) {
   return comparators.reduce(function (acc, current, index) {
-    var isDuplicate = comparators
-      .slice()
-      .splice(index, 1)
+    var isDuplicate = remove(comparators, index)
       .some(function (comparator, index) {
         if (!current.operator) {
+          return comparator.test(current.semver)
+        }
+        if (current.operator.charAt(0) === comparator.operator.charAt(0)) {
           return comparator.test(current.semver)
         }
       })
