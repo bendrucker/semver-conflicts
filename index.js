@@ -26,7 +26,8 @@ function cleanSet (comparators) {
           return comparator.test(current.semver)
         }
         if (current.operator.charAt(0) === comparator.operator.charAt(0)) {
-          return comparator.test(current.semver)
+          var test = current.operator.charAt(0) === '>' ? 'lt' : 'gt'
+          return semver[test](current.semver.toString(), comparator.semver.toString())
         }
       })
     if (!isDuplicate) acc.push(current)
