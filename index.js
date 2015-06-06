@@ -33,6 +33,8 @@ function dedupeComparators (comparators) {
             // lt beats lte, gt beats gte
             return /=/.test(current.operator)
           }
+          // for gt/gte, we want the bigger version
+          // for lt/lte, we want the smaller version 
           var test = current.operator.charAt(0) === '>' ? 'lt' : 'gt'
           return semver[test](current.semver.toString(), comparator.semver.toString())
         }
