@@ -30,6 +30,7 @@ function cleanSet (comparators) {
             if (current.operator === comparator.operator) {
               return index > comparators.indexOf(comparator)
             }
+            if (/=/.test(current.operator)) return true
           }
           var test = current.operator.charAt(0) === '>' ? 'lt' : 'gt'
           return semver[test](current.semver.toString(), comparator.semver.toString())
