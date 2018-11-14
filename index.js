@@ -48,5 +48,5 @@ function stringifyComparators (comparators) {
   return comparators.map(function (comparator) {
     return comparator.toString()
   })
-  .join(' ')
+    .join(' ')
 }
