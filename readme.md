@@ -1,4 +1,4 @@
-# semver-conflicts [![Build Status](https://travis-ci.org/bendrucker/semver-conflicts.svg?branch=master)](https://travis-ci.org/bendrucker/semver-conflicts)
+# semver-conflicts [![Build Status](https://travis-ci.org/bendrucker/semver-conflicts.svg?branch=master)](https://travis-ci.org/bendrucker/semver-conflicts) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/semver-conflicts.svg)](https://greenkeeper.io/)
 
 > Remove conflicts/overlaps/duplicates from a semver range
 
