@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "arr-remove": "~1.0.0",
-    "semver": "^5.3.0",
+    "semver": "^6.0.0",
     "sort-semver-comparators": "^1.0.1"
   },
   "devDependencies": {
