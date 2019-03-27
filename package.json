@@ -1,7 +1,7 @@
 {
   "name": "semver-conflicts",
   "main": "index.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Remove conflicts from a semver range",
   "license": "MIT",
   "repository": "bendrucker/semver-conflicts",
