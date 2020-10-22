@@ -27,7 +27,7 @@
     "sort-semver-comparators": "^1.1.1"
   },
   "devDependencies": {
-    "standard": "^14.0.0",
+    "standard": "^15.0.0",
     "tape": "^5.0.0"
   },
   "files": [
