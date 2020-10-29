@@ -23,6 +23,7 @@ function dedupeComparators (comparators) {
         if (!current.operator) {
           return comparator.test(current.semver)
         }
+
         // both same direction (less than, greater than), maybe lte/gte
         if (current.operator.charAt(0) === comparator.operator.charAt(0)) {
           if (current.semver.version === comparator.semver.version) {
@@ -38,6 +39,8 @@ function dedupeComparators (comparators) {
           const test = current.operator.charAt(0) === '>' ? 'lt' : 'gt'
           return semver[test](current.semver.toString(), comparator.semver.toString())
         }
+
+        return false
       })
     if (!isDuplicate) acc.push(current)
     return acc
