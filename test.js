@@ -1,7 +1,7 @@
 'use strict'
 
-var test = require('tape')
-var noConflict = require('./')
+const test = require('tape')
+const noConflict = require('./')
 
 test(function (t) {
   t.equal(noConflict('>2'), '>=3.0.0')
